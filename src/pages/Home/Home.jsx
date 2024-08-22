@@ -12,15 +12,12 @@ const [input, setInput]= useState('');
 
 const inputHandler = (event)=>{
 setInput(event.target.value);
-if(event.target.value ===""){
-  setDisplayCoin(allCoin);
-}
 }
 
 const searchHandler = async (event)=>{
 event.preventDefault(); //to prevent page from reloading when searching
 const coins = await allCoin.filter((item)=>{
-return item.name.toLowerCase().includes(input.toLowerCase())
+return item.name.toLowerCase().includes(input.toLowerCase()) //this will include the search string among the options that are shown
 })
 //to display the updated data in the table
 setDisplayCoin(coins);

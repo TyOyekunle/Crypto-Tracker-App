@@ -9,6 +9,7 @@ const App = () => {
   return (
     <div className='app'>
       <Navbar/>
+      <Home/>
       <Routes>
       {/* whenever the / path is opened or clicked, it should take us to the home page */}
         <Route path='/' element={<Home/>} /> 

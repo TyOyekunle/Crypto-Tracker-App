@@ -24,10 +24,13 @@ const CoinContextProvider = (props)=>{
                  'CG-K2uX6oqunH48Y7TB4ReJQZtH'}
           };
           
-          fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}`, options)
+          fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`, options)
             .then(response => response.json()) //this will convert the response to json
             .then(response => setAllCoin(response)) //response will be printed to the setCoin variable which will update the 
             .catch(err => console.error(err)); 
+
+
+
     }
 
     //useEffect will call the fetchAllCoin function which will fetch the data from the api
