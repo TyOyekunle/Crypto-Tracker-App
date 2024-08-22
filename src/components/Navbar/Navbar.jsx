@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import './Navbar.css'
 import logo from '../../assets/logo23.png'
-import dark_icon from '../../assets/dark.svg'
+import bulb_icon from '../../assets/lightmode.svg'
 import { CoinContext } from '../../context/CoinContext'
 
 const Navbar = () => {
@@ -17,7 +17,7 @@ const Navbar = () => {
         break;
       }
       case "naira": {
-        setCurrency({ name: "inr", symbol: "#" });
+        setCurrency({ name: "naira", symbol: "#" });
         break;
       }
       case "eur": {
@@ -57,7 +57,7 @@ const Navbar = () => {
           
         </select>
 
-        <img src={dark_icon} alt="" className='dark_icon' />
+        <img src={bulb_icon} alt="" className='bulb_icon' />
         <button> Sign up </button>
       </div>
     </div>
